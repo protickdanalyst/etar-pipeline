@@ -339,6 +339,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-*Built with Python 3.11 · Kafka · Spark · Airflow · ClickHouse · MinIO · FastAPI · Streamlit*
+*Built with Python · Kafka · Spark · Airflow · ClickHouse · MinIO · FastAPI · Streamlit*
 
 </div>
