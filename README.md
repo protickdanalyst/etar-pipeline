@@ -176,42 +176,6 @@ It covers the full lifecycle:
 
 ---
 
-## 📷 Screenshots / Demo
-
-> **Live Dashboard** — refreshes every ~45 seconds with the latest Spark analysis
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│  Event Analysis Dashboard                                           │
-│                                                                     │
-│  ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐                          │
-│  │ █   │ │ █   │ │ █   │ │ █   │ │ █   │  ■ Success                │
-│  │ █ ▓ │ │ █ ▓ │ │ █ ▓ │ │ █ ▓ │ │ █ ▓ │  ▓ Error                 │
-│  └─────┘ └─────┘ └─────┘ └─────┘ └─────┘                          │
-│  Add to  Checkout Payment  Search  View                             │
-│  Cart                              Product                          │
-│                                                                     │
-│  Total Events: 5,805  |  Total Errors: 1,398  |  TS: 2025/08/04    │
-│  Spark process took 22.15 seconds                                   │
-└─────────────────────────────────────────────────────────────────────┘
-```
-
-> **Airflow DAG** — three tasks, 60-second schedule, `max_active_runs=1`
-
-```
-stream_from_clickhouse_to_minio  ──▶  spark_analysis  ──▶  send_to_dashboard
-       (PyArrow + S3A)                 (SparkSubmit)          (FastAPI POST)
-```
-
-> **Kafka Connect DLQ in action**
-
-```
-Topic: user_interactions          → ClickHouse (✓ good messages)
-Topic: user_interactions.dlq      → parked (✗ malformed messages, pipeline unblocked)
-```
-
----
-
 ## ⚙️ Installation & Setup
 
 **Requirements:** Docker ≥ 24 · Docker Compose ≥ 2.20 · `make` · 8 GB RAM · 4 CPU cores
@@ -358,11 +322,6 @@ With a 3-second `retry_delay`, a retry fired while the ClickHouse connection was
 
 ---
 
-## 🤝 Contribution
-
-Contributions are welcome. Open an issue to discuss the change first, then submit a pull request against the `develop` branch. All PRs must pass `make test` before review.
-
----
 
 ## 📄 License
 
@@ -374,11 +333,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-**Your Name** — Data Engineer
+**Ashfaqur Protick**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-profile)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat&logo=github&logoColor=white)](https://github.com/your-username)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:your.email@example.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashfaqurprotick/)
 
 ---
 
