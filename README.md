@@ -6,14 +6,6 @@
 
 **Ingest → Store → Analyse → Visualise — fully automated, every 60 seconds**
 
-[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
-[![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-7.9-231F20?style=flat&logo=apachekafka&logoColor=white)](https://kafka.apache.org)
-[![Apache Spark](https://img.shields.io/badge/Apache_Spark-3.5-E25A1C?style=flat&logo=apachespark&logoColor=white)](https://spark.apache.org)
-[![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-3.0-017CEE?style=flat&logo=apacheairflow&logoColor=white)](https://airflow.apache.org)
-[![ClickHouse](https://img.shields.io/badge/ClickHouse-25.6-FFCC01?style=flat&logo=clickhouse&logoColor=black)](https://clickhouse.com)
-[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=flat&logo=docker&logoColor=white)](https://docker.com)
-[![CI](https://img.shields.io/badge/CI-GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)](https://github.com/features/actions)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 <br/>
 
