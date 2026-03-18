@@ -34,7 +34,6 @@ It covers the full lifecycle:
 | **Analyse** | PySpark reads a Parquet file from MinIO, computes success/error rates per event type, writes results atomically |
 | **Visualise** | Streamlit dashboard auto-refreshes with a live bar chart, event counts, and processing time |
 
-**96 files · 3,000+ lines of Python · 17 test files · 5 isolated test suites · GitHub Actions CI**
 
 ---
 
