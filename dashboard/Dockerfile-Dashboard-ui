@@ -1,0 +1,12 @@
+FROM python:3.11.13-bookworm
+
+RUN pip install --no-cache-dir \
+    matplotlib==3.10.5 \
+    requests==2.32.4 \
+    streamlit==1.47.1
+
+WORKDIR /home
+
+COPY dashboard_ui.py ./
+
+CMD ["python", "dashboard_ui.py"]

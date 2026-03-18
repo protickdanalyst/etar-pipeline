@@ -1,0 +1,8 @@
+ARG IMAGE_TAG=latest
+FROM lp/spark:${IMAGE_TAG}
+
+USER root
+
+RUN pip install --no-cache-dir pytest==8.4.1 pytest-mock==3.14.1
+
+USER spark

@@ -1,0 +1,12 @@
+FROM python:3.11.13-bookworm
+
+RUN pip install --no-cache-dir \
+    fastapi==0.116.1 \
+    pydantic==2.11.7 \
+    uvicorn[standard]==0.35.0
+
+WORKDIR /home
+
+COPY dashboard_api.py ./
+
+CMD ["uvicorn", "dashboard_api:app", "--host", "0.0.0.0", "--port", "8080"]

@@ -1,0 +1,48 @@
+[project]
+name = "etar-pipeline"
+version = "1.0.0"
+description = "End-to-end streaming data pipeline: Kafka → ClickHouse → Spark → Dashboard"
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+producer = [
+    "confluent-kafka[avro]==2.11.0",
+    "python-dotenv==1.1.1",
+]
+airflow = [
+    "apache-airflow==3.0.2",
+    "apache-airflow-providers-apache-spark==5.3.2",
+    "clickhouse-connect==0.8.18",
+    "python-dotenv==0.9.9",
+    "pandas==2.1.4",
+    "pyarrow==16.1.0",
+    "requests==2.32.3",
+    "minio==7.2.16",
+]
+spark = [
+    "pyspark==3.5.6",
+    "pandas==2.0.3",
+    "pyarrow==17.0.0",
+    "minio==7.2.10",
+]
+dashboard = [
+    "fastapi==0.116.1",
+    "uvicorn[standard]==0.35.0",
+    "pydantic==2.11.7",
+    "requests==2.32.4",
+    "matplotlib==3.10.5",
+    "streamlit==1.47.1",
+]
+db = [
+    "clickhouse-connect==0.8.18",
+    "minio==7.2.16",
+]
+dev = [
+    "pytest==8.4.1",
+    "pytest-mock==3.14.1",
+    "httpx==0.28.1",
+]
+
+[tool.ruff.per-file-ignores]
+'test_*.py' = ['ANN001', 'ANN002', 'ANN003', 'ANN202', 'ANN201', 'ARG001', 'ARG005', 'BLE001', 'DOC201', 'INP001', 'N802', 'PLR2004', 'S101', 'S105', 'S106', 'S608']
+'*.py' = ["INP001"]

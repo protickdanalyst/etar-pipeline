@@ -1,0 +1,7 @@
+# IMAGE_TAG is passed by docker compose build (or CI) so the test image is
+# always built on top of an exact, locally-built production image — never a
+# floating :latest that could differ between CI runners or developer machines.
+ARG IMAGE_TAG=latest
+FROM lp/airflow:${IMAGE_TAG}
+
+RUN pip install --no-cache-dir "apache-airflow==${AIRFLOW_VERSION}" pytest==8.4.1 pytest-mock==3.14.1

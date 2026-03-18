@@ -1,0 +1,4 @@
+ARG IMAGE_TAG=latest
+FROM lp/dashboard-api:${IMAGE_TAG}
+
+RUN pip install --no-cache-dir pytest==8.4.1 httpx==0.28.1 requests==2.32.4

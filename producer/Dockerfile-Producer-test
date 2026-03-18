@@ -1,0 +1,6 @@
+ARG IMAGE_TAG=latest
+FROM lp/producer:${IMAGE_TAG}
+
+ENV PYTHONUNBUFFERED=1
+
+RUN pip install --no-cache-dir pytest==8.4.1 pytest-mock==3.14.1 clickhouse-connect==0.8.18

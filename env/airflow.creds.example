@@ -1,0 +1,9 @@
+# Fernet key: generate with -> python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
+AIRFLOW__CORE__FERNET_KEY=REPLACE_WITH_GENERATED_FERNET_KEY
+
+# API secret key: any long random string
+AIRFLOW__API__SECRET_KEY=REPLACE_WITH_RANDOM_SECRET_KEY
+
+# Airflow web UI admin credentials
+_AIRFLOW_WWW_USER_USERNAME=airflow
+_AIRFLOW_WWW_USER_PASSWORD=REPLACE_WITH_STRONG_PASSWORD
